@@ -35,6 +35,8 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    background-color: #9B0D1C;
+    padding: 10px;
 }
 .navbar__menu {
     display: flex;
@@ -81,8 +83,15 @@
     transition: all 0.3s ease-in-out;
 }
 .navbar__links:hover {
-    color: #9B0D1C;
+    color: #fff;
     transition: all 0.3s ease-in-out;
+}
+.active, .navbar__item:hover{
+    background: #9B0D1C;
+    color: #fff;
+    margin: 0px .2px;
+    /* margin: 10px; */
+
 }
 .banner{
     height: 87vh;
@@ -181,7 +190,6 @@
     width: 100%;
     gap: 25px;
     background: #f9f9f9;
-    height: 250px;
     padding: 10px 10%;
     margin: 10 auto;
     line-height: 24px;
@@ -526,9 +534,6 @@ textarea:valid~label{
    .payment img{
         width: 80%;
     }
-    /* .support > div:nth-child(2){
-        grid-column: 1/span2;
-    } */
     .support > div:nth-child(2){
         grid-column: 1/span2;
 
@@ -603,7 +608,7 @@ textarea:valid~label{
         margin: 0 auto;
         
     }
-    .payment{
+    /* .payment{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
@@ -611,12 +616,15 @@ textarea:valid~label{
         background: #f9f9f9;
         padding: 10px 10%;
         line-height: 24px;
-    }
+    } */
     .payment > div:nth-child(1){
         grid-column: 1/ span2;
+        
     }
     .payment > div:nth-child(2){
-        grid-column: 1/ span2;
+        /* grid-column: 1/ span2;
+        text-align: center; */
+        grid-column: 1/span2;
         text-align: center;
     }
     .payment img{
@@ -668,3 +676,76 @@ textarea:valid~label{
     }
     
 }
+/**Styling scrollable elements*/
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 1000ms;
+  }
+  
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
+  
+  .scrolled.fade-in {
+    animation: fade-in 1.5s ease-in-out both;
+  }
+  .scrolled.fade-in-bottom {
+    animation: fade-in-bottom 1.5s ease-in-out both;
+  }
+  
+  .scrolled.slide-left {
+    animation: slide-in-left 1.5s ease-in-out both;
+  }
+  
+  .scrolled.slide-right {
+    animation: slide-in-right 1.5s ease-in-out both;
+  }
+  
+@keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-100px);
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(100px);
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
