@@ -14,6 +14,7 @@ menu.addEventListener('click', function() {
 //         console.log(activePage)
 //     }
 // })
+// Hndling active page
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('nav a').forEach(link => {
   if(link.href.includes(`${activePage}`)){
@@ -63,6 +64,17 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });
+
+//getting current year in the footer
+const footer= ` 
+<p>Copyright &copy ${new Date().getFullYear()} 
+Motherway Education Centre | @devintechnology | Kfelix
+</p> `;
+
+document.getElementById('myFooter').innerHTML = footer;
+
+
+
 // var btnContainer = document.getElementById("tabs");
 
 // // Get all buttons with class="btn" inside the container
