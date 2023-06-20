@@ -68,7 +68,7 @@ window.addEventListener("scroll", () => {
 //getting current year in the footer
 const footer= ` 
 <p>Copyright &copy ${new Date().getFullYear()} 
-Motherway Education Centre | @devintechnology | Kfelix
+Motherway Education Centre | @devintechnology | geofelix
 </p> `;
 
 document.getElementById('myFooter').innerHTML = footer;
